@@ -56,22 +56,10 @@ class ViewController: UIViewController {
         timer.invalidate()
         
         let FloatHeight = Float(secondLabel.text!) ?? 0.0
+
+        var height = Int(FloatHeight * FloatHeight/100*16.087/3.281)
         
-        //secondi caduta^2  x  16.087
-        
-        //piedi a metro for an approximate result, divide the length value by 3.281
-        
-        var calcolo1 = FloatHeight * FloatHeight
-        
-        var calcolo12 = calcolo1 / 100
-        
-        var calcolo2 = calcolo12 * 16.087
-        
-        var calcolo3 = calcolo2 / 3.281
-        
-        let calcolo3Int = Int(calcolo3)
-        
-        heightLabel.text = "\(calcolo3Int)"
+        heightLabel.text = "\(height)"
         
 
     }
